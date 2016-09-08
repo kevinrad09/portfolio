@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #header {
+                padding-left: 10vw;
+                display: flex;
+                
+                
+                
+                
+                
+            
+                
+            }
+            
+            #right {
+                
+                padding-left: 10vw;
+                
+                border-left: solid black;
+                
+                
+            }
+            
+           
+            
+            
+        </style>
+    </head>
+    <body>
+        <div>
+            <input id="listitem" type="text"/>
+            
+            <select id="choice">
+                <option value="todolist">Grocery List</option>
+                <option value="todolistright">To Do List</option>  
+            </select>
+            
+            <button id="button" type="button">Task Name</button>
+            
+        </div>
+         
+        <br><br>
+        
+        <div id="header">
+            <h1>To Do List</h1>
+                <ul id="todolist"></ul>
+            <h1 id="right">Grocery List</h1>
+                <ul id="todolistright"></ul>
+        </div>    
+                
+        
+        
+        
+        <script   src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
+            <script>
+            /*
+            function addName(){
+                $("add").append("<span>" + name + "</span>");
+            });
+            
+            $("#button").click(function(){
+                var name = $("#add").val();
+                    addName();
+            }); */
+                
+            /*function todoList (){
+                var item = document.getElementById("listitem").value
+                var text = document.createTextNode(item)
+                var newItem = document.createElement ("li")
+                newItem.appendChild(text)
+                document.getElementById("todoList").appendChild(newItem)
+            }*/
+                
+              
+                
+                
+            function addName(listitem){
+                $("<ul>" + listitem + "</ul><br/>").appendTo("h1").click(function(){
+
+                    $(this).css("textDecoration", "line-through");
+                    
+                    
+
+                });
+            }    
+           
+                $("#button").click(function(){
+
+                var name = $("#listitem").val();
+
+                addName(name);  //call the addName function, passing in the value from the input field
+                    
+                   
+
+            });
+            
+                $("body").on("click", "#header h1", function(){
+
+                $(this).css("color", "red");
+
+            });
+                
+                 $("#choice").val();  
+
+            
+        </script>
+    </body>
+</html>

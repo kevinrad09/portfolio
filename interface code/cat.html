@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="standard.css" type="text/css">
+        <script type="text/javascript" src="orange.js"></script>
+        
+         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+<style>
+            body {
+                background: url(playful-kitten-6683.jpg) no-repeat center fixed;
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                font-family: Montserrat;
+                font-size:4vh;
+                
+            }
+            
+            #header{
+                font-size:9vh;
+                
+                
+            }
+            
+            #subheader{
+                
+                
+                
+                
+            }
+            
+            p{
+                display: inline-block;
+                
+            }
+
+            #netflix{
+                margin-top:15px; 
+                height: 60px;
+                width: 100px;
+                position: absolute;
+                
+                
+                
+            }
+            
+            .orange{
+                color: orange;
+                text-shadow: 3px 3px 5px black;
+            }
+            
+            
+            
+            #options{
+                position: absolute;
+                bottom: 4vh;
+                right: 0;
+                
+            }
+            
+            a{
+                font-size: 5vh;
+                text-decoration: none;
+                color: orange;
+                padding: 2vw;
+                text-shadow: 3px 3px 5px black;
+                
+            }
+            
+            #popup{
+
+                display: none;
+
+                position: absolute;
+
+                top: 35vh;
+
+                left: 20vw;
+
+                max-width: 60%;
+
+                max-height: 60%;
+
+                border: 5px solid rgba(255,153,0,0.8);
+                
+
+                background-color: rgba(0,0,0, 0.8);
+
+                border-radius: 20px;
+                
+                
+                
+                
+            
+            }
+            
+            #close{
+                position: absolute;
+                right: -1vw;
+                top: -2vh;
+                height: 4vh;
+                
+                
+                
+                
+            }
+            
+            #close img{
+                height: 4vh;
+                
+            }
+            
+            #table{
+                color: orange;
+                opacity: .6;
+                padding: 4vh;
+                font-size: 70%;
+                padding: 10px;
+                
+            }
+            
+            @media screen and (max-width: 570px){
+                #table{
+                    font-size: 50%;
+                }
+            }
+            
+        </style>
+             
+        
+        
+        
+    </head>
+
+    <body>
+        <div id="header">
+            <p class="orange">Orange</p> is the new <p class="orange">Cat</p>
+        </div>
+        
+        <div id="subheader">
+            <p>only on</p>
+            <img src="netflix.jpg" id="netflix"> 
+        </div>
+        
+        <div id="options">
+            <a href="#home" id="home">Home</a>
+            <a href="#about" id="about">About</a>
+            <a href="#schedule" id="slide">Schedule</a>
+            <a href="#contact" id="contact">Contact</a>
+        </div>
+        
+        <div id="popup">
+            
+            <div id="close"> 
+                <img src="close.jpg">
+            </div>
+
+            <table id="table">
+                <tr>
+                    <td>Silly Kitty</td>
+                    <td>The first episode in which we meet a very silly kitty.</td> 
+                    <td>07/05/2016</td>
+                </tr>
+                <tr>
+                    <td>Trouble in Orange</td>
+                    <td>Silly kitty gets lost and spends the night in kitty lockup.</td> 
+                    <td>07/12/2016</td>
+                </tr>
+                <tr>
+                    <td>Claws of Fury</td>
+                    <td>Ninja cats attack the home and silly kitty must defend his family!</td> 
+                    <td>07/19/2016</td>
+                </tr>
+            
+            
+            </table>
+            
+
+        </div>
+        
+        
+        <script   src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
+        <script>
+           /* $("#slide").hover(function(){
+                $("#slide").slideUp("slow");
+            });
+            
+            $("#slide").hover(function(){
+                $("#slide").slideDown("slow");
+            });*/
+            
+            
+            $("#slide").click(function(){
+
+                $("#popup").fadeIn(1000);
+
+            });
+            
+            $("#close").click(function(){
+
+                $("#popup").fadeOut(1000);
+
+            });
+  
+        </script>
+
+    </body>
+</html>

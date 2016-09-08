@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <style>
+
+            body{
+
+                margin: 0;
+
+            }
+
+            
+
+            #header{
+
+                width: 100vw;
+
+                height: 50vh;
+
+                background-color: red;
+
+            }
+
+            
+
+            #logo{
+
+                height: 10vh;
+
+                position: absolute;
+
+                top: 20vh;
+
+                left: 50vw;
+
+                margin-left: -5vw;
+
+            }
+
+            
+
+            nav{
+
+                position: absolute;
+
+                right: 0;
+
+                line-height: 50vh;
+
+                vertical-align: middle;
+
+                margin-right: 12.5vw;
+
+            }
+
+            
+
+            nav a{
+
+                margin-left: 2.5vw;
+
+            }
+
+            
+
+            nav a:first-of-type{
+
+                margin: 0;
+
+            }
+
+            
+
+            .box{
+
+                width: 30vw;
+
+                height: 20vh;
+
+                padding: 5vmin;
+
+                border: 2vmin solid green;
+
+                margin: 10vmin;
+
+                background-color: blue;
+
+                position: absolute;
+
+                bottom: 0;
+
+            }
+
+            
+
+            #borderbox{
+
+                right: 0;
+
+                box-sizing: border-box;
+
+            }
+
+        </style>
+
+        <body>
+
+            <div id="header">
+
+                <img id="logo" src="http://placehold.it/300x200" />
+
+                <nav>
+
+                    <a href="#">GOOGLE</a>
+
+                    <a href="#">YAHOO</a>
+
+                    <a href="#">APPLE</a>
+
+                </nav>
+
+            </div>
+
+            <div class="box"></div>
+
+            <div id="borderbox" class="box"></div>
+
+        </body>
+
+    </head>
+
+</html>
+

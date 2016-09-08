@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <style>
+
+            body{
+
+                padding: 10vmin;    
+
+            }
+
+            
+
+            .completed{
+
+                text-decoration: line-through;
+
+            }
+
+            
+
+            .task span{
+
+                font-size: 3vh;
+
+                padding-left: 2vw;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        Task Name: <input id="name"/>
+        
+        <button id="add" type="button">Add</button><input type="checkbox" id="checkboxselector">Important
+            <select>
+                <option id="blue">blue</option>
+                <option id="green">green</option>
+                <option id="red">red</option>
+            </select>
+
+        <br/>
+
+        <br/>
+
+        <br/>
+
+        <div id="list">
+
+            <h1>To Do Tasks:</h1>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+        <script>
+
+            var Task = function(){
+
+                this.taskDescription = "";
+
+                this.isCompleted = false;
+
+                
+
+                this.complete = function(){
+
+                    this.isCompleted = true;
+
+                };
+
+            };
+
+            
+
+            var counter = 0;
+
+            var tasks = [];
+
+            
+
+            function addTask(name, isCompleted){
+
+                var addedClasses = "";
+
+                if(isCompleted){
+
+                    addedClasses += " completed";
+
+                }
+
+                $("#list").append("<div class='task"+addedClasses+"' index="+counter+"><span>"+name+"</span></div>");
+
+                counter++;
+
+                var addedTask = new Task();
+
+                addedTask.taskDescription = name;
+
+                addedTask.isCompleted = isCompleted;
+
+                tasks.push(addedTask);
+
+                localStorage.storedTasks = JSON.stringify(tasks);
+
+            };
+
+            
+
+            $("#list").on("click", ".task", function(){
+
+                if($(this).hasClass("completed")){
+
+                    $(this).removeClass("completed");
+
+                    var index = $(this).attr("index");
+
+                    tasks[index].isCompleted = false;
+
+                }else{
+
+                    $(this).addClass("completed");
+
+                    var index = $(this).attr("index");
+
+                    tasks[index].isCompleted = true;
+
+                }
+
+                localStorage.storedTasks = JSON.stringify(tasks);
+
+            });
+
+            
+
+            $("#add").click(function(){
+
+                var name = $("#name").val();
+
+                addTask(name, false);
+
+            });
+
+            
+
+            if(typeof(Storage) !== "undefined"){
+
+                if(localStorage.storedTasks !== undefined){
+
+                    var jsonString = localStorage.storedTasks;
+
+                    var jsonObject = JSON.parse(jsonString);
+
+                    for(idx in jsonObject){
+
+                        var taskName = jsonObject[idx].taskDescription;
+
+                        var taskIsCompleted = jsonObject[idx].isCompleted;
+
+                        addTask(taskName, taskIsCompleted);
+
+                    }
+
+                }
+
+            }else{
+
+                //no support
+
+            }
+            
+            /*var checked = $("#checkboxselector").is(":checked");
+
+            if(checked){
+
+                task.style.fontWeight = "bold";
+
+            }else{
+
+                //not important
+
+            }*/
+
+        </script>
+
+    </body>
+
+</html>

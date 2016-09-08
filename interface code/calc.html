@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <style>
+
+            body{
+
+                padding: 20vmin;    
+
+            }
+
+            
+
+            #questionWrapper{
+
+                position: relative;
+
+            }
+
+            
+
+            .question{
+
+                position: absolute;
+
+                left: 140px;
+
+            }
+
+            
+
+            .error{
+
+                background-color: red;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="questionWrapper">
+
+            What is 2 + 3?: <input id="question1" class="question" solution="5"/>
+
+            <br/><br/>
+
+            What is 3 + 4?: <input id="question2" class="question" solution="7"/>
+
+            <br/><br/>
+
+            What is 3 * 2?: <input id="question3" class="question" solution="6"/>
+
+            <br/><br/>
+
+            What is 3 * 5?: <input id="question4" class="question" solution="15"/>
+
+            <br/><br/>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+        <script>
+
+            /************************/
+
+            /*GLOBAL VARIABLES - OBJECT DEFINITIONS START*/
+
+           
+            
+
+            /*GLOBAL VARIABLES - OBJECT DEFINITIONS END*/
+
+            /************************/
+
+            /*FUNCTIONS START*/
+
+           
+
+            
+
+            /*FUNCTIONS END*/
+
+            /************************/
+
+            /*EVENT REGISTRATION START*/
+
+            
+            $(".question").change(function(){
+                var userAnswer = $(this).val();
+                
+                var solution = $(this).attr("solution");
+                console.log(userAnswer + "==" +solution);
+                
+                if(userAnswer == solution){
+                    $(this).removeClass("error");
+                }else{
+                    $(this).addClass("error");
+                }
+                
+            });
+            
+
+            /*EVENT REGISTRATION END*/
+
+            /************************/
+
+            /*ONE TIME JS CODE - AT PAGE LOAD START*/
+
+            
+
+            
+
+            /*ONE TIME JS CODE - AT PAGE LOAD END*/
+
+            /************************/
+
+        </script>
+
+    </body>
+
+</html>

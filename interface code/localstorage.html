@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1> Hello <span>unknown</span> person!</h1>
+        <button id="setName" type="button">Set Name</button>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script>
+            if(typeof(Storage) !== "undefined"){
+                
+            }else{
+                alert("No localStorage");
+            }
+            
+            $("setName").click(function(){
+               var name = $("#name").val();
+                $("h1 span").text(name);
+                localStorage.name = name;
+            });
+        
+        
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+    </head>
+
+    <body>
+
+        <input id="name" type="text" />
+
+        <button id="add" type="button">Add</button>
+
+        <div id="container">
+
+            <span>Text in HTML</span>
+
+        </div>
+
+        
+
+        
+
+        
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
+
+        <script>
+
+            function addName(name){
+
+                //append - Add this element as the LAST child (inside) of the selected element
+
+                //$("#container").append("<span>" + name + "</span>");
+
+                
+
+                //prepend - Add this element as the FIRST child (inside) of the selected element
+
+                //$("#container").prepend("<span>" + name + "</span><br/>");
+
+                
+
+                //before - Add this element right BEFORE the selected element as a sibling
+
+                //$("#container").before("<span>" + name + "</span><br/>");
+
+                
+
+                //after - Add this element right AFTER the selected element as a sibling
+
+                //$("#container").after("<span>" + name + "</span><br/>");
+
+                
+
+                //appendTo - ***Special*** - The selector is the HTML text to be added, and the parameter
+
+                //in the appendTo call is the selector for where you want the code appended.
+
+                //The purpose, here, is that you can chain additional action calls on the ADDED content,
+
+                //rather than on the container. This allows your code to already have a reference
+
+                //to the added content, even if there is no way to easily and uniquely select it (id etc).
+
+                $("<span>" + name + "</span><br/>").appendTo("#container").click(function(){
+
+                    $(this).css("textDecoration", "line-through");
+
+                });
+
+            }
+
+            
+
+            $("#add").click(function(){
+
+                var name = $("#name").val();
+
+                addName(name);  //call the addName function, passing in the value from the input field
+
+            });
+
+            
+
+            //This style of click handler (attached to a parent element, allows you to 
+
+            //register events for html elements that may or may not exist yet. 
+
+            //As the event is hooked on the parent that DOES exist
+
+            //
+
+            //The key to using this is remembering to select the container element
+
+            //and then remembering your selector after the event type (in this case the
+
+            // "#container span") in the event registration
+
+            
+
+            $("body").on("click", "#container span", function(){
+
+                $(this).css("color", "red");
+
+            });
+
+        </script>
+
+    </body>
+
+</html>

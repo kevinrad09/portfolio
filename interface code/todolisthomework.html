@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container{
+               display: flex; 
+                
+            }
+            
+            .box{
+                flex-grow: 1;
+                text-align: center;
+                
+                
+                
+            }
+            
+            
+            
+        </style>
+    </head>
+
+    <body>
+        <input id="task" type="text">
+        <select id="choice">
+            <option value="list1">List 1</option>
+            <option value="list2">List 2</option>
+        </select>
+        <button id="add" type="button">Add</button>
+        
+        <div id="container">
+            <div class="box" id="list1"><h1>List 1</h1></div>
+            <div class="box" id="list2"><h1>List 2</h1></div>
+        </div>
+        
+        
+        
+        
+        <script   src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
+        <script>
+            $("#add").on("click", function(){
+                var task = $("#task").val();
+                var choice = $("#choice").val();
+                $("#"+choice).append("<div class='task'>"+task+"<span>x</span></div>");
+            });
+                         
+                         
+            $("body")
+            
+            
+            
+        
+        </script>
+    
+    </body>
+
+</html>
+
+
+<!-- user input task description
+user selection for which list to add the task to button trigger adding that task
+
+    read in the description
+    read in the list choice
+        deciding which element to add to
+        appending content to the page
+
+
+click on the task to cross it out
+    make some kind of css change, or by applying/removing a class
+
+
+click on the something to remove task from list
+    starting at the click point
+    navigating to the element to be removed
+    removing it from the page -->
+

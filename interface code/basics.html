@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            a{
+                text-decoration: none;
+            }
+            
+            a:hover{
+                color: orange !important;
+                text-decoration: underline;
+            }
+            #maincontent > * {
+               color: red;
+            
+            }
+            
+            a.inactive{
+                color: gray !important;
+            }
+            
+            #maincontent > span a {
+                color: green;
+            }
+            
+            a[href="#"]{
+                font-size: 10vh;
+            }
+            
+            #maincontent a:last-of-type{
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="maincontent">
+            <a class="inactive" href="http://www.google.com">Google</a>
+            <a href="#">Yahoo</a>
+            <span>
+                <a href="#">Apple</a>
+            </span>
+        </div>
+    </body>
+</html>
+
+
+<!-- 

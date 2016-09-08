@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            var arrayData = ["first", 2, 3, "fourth", true];
+            var counter = 0;
+            while (counter < arrayData.length){
+                console.log(arrayData[counter]);
+                counter++;
+            }
+            counter=0;
+            while(true){
+                console.log(arrayData[counter]);
+                if(arrayData[counter] == "fourth"){
+                    break;
+            }
+            counter++;
+            }
+            
+            for(counter=0; counter<arrayData.length; counter++){
+                console.log("FORLOOP " +arrayData[counter]);
+            }
+            
+            for(i in objData){
+                console.log(i);
+                console.log(objData[i]);
+                objData.name;
+                objData["name"];
+            }
+            
+        </script>
+    </body>
+
+</html>

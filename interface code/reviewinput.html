@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .error{
+                border: 1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        First Name: <input type="text" id="name"/>
+        Last Name: <input type="text" id="lastname"/>
+        Address: <input type="text" id="address"/>
+        City: <input type="text" id="city"/>
+        <button type="button" id="submit">Submit</button>
+        
+        
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script>
+            $("#submit").click(function(eventData){
+                $("input").each(fucntion(){
+                   var inputvalue = $(this).val();
+                    if(input value == ""){
+                        $(this).addClass("error");
+                       }
+                });  
+            });
+            
+        </script>
+    </body>
+</html>

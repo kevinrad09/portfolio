@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+            }
+            
+            #wrapper{
+                height:100vh;
+                display: flex;  
+                flex-direction: column;
+                text-align: center;
+                justify-content: space-around;
+                
+                
+                    
+            }
+            
+            
+            #top{
+                
+                height: 15vh;
+                display: flex;
+                background-color: black;
+                color: white;
+                line-height: 15vh;
+                font-size:7vh;
+                text-align: center;
+                
+                
+                
+            }
+            
+           
+            
+            #firstbox{
+                flex-grow: .75;
+                border: 3px solid white;
+                
+                
+                
+            }
+            
+            #secondbox{
+                flex-grow: .25;
+                border: 3px solid white;
+                
+            }
+            
+            #middle{
+                height: 15vh;
+                line-height: 15vh;
+                display: flex;
+                font-size: 7vh;
+                background-color: black;
+                color: white;
+                
+                
+            }
+            
+            #first{
+                flex-grow: .337;
+                border: 3px solid white;
+            }
+            
+            #second{
+                flex-grow: .337;
+                border: 3px solid white;
+            }
+            
+            #third{
+                flex-grow: .337;
+                border: 3px solid white;
+            }
+            
+            #bottom{
+                height: 15vh;
+                line-height: 15vh;
+                display: flex;
+                font-size: 7vh;
+                background-color: black;
+                color: white;
+                
+                
+            }
+            
+            #a{
+                flex-grow: 50;
+                border: 3px solid white;
+            }
+                
+            #b{
+                flex-grow: 50;
+                border: 3px solid white;  
+            }
+            
+           
+        </style>
+    </head>
+    
+    <body>
+    
+        <div id="wrapper">
+            <h1>Master and Detail</h1>
+            <div id="top">
+                
+                <div id="firstbox" class="topbox">75%</div>
+                <div id="secondbox" class="topbox">25%</div>
+
+            </div>
+        
+            
+            <h1>3 Equal Columns</h1>
+            <div id="middle">
+                <div id="first" class="middlebox">33%</div>
+                <div id="second" class="middlebox">33%</div>
+                <div id="third" class="middlebox">33%</div>
+            </div>  
+            
+            <h1>2 Equal Columns</h1>
+            <div id="bottom">
+                <div id="a" class="bottombox">50%</div>
+                <div id="b" class="bottombox">50%</div>
+            </div>  
+        </div>
+        <br><br>
+        
+        
+    
+    
+    </body>
+
+</html>

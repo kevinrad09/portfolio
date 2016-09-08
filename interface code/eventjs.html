@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #box{
+                width: 30vw;
+                height: 30vw;
+                border: 5px solid black;
+            }
+            
+        
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+        <button id="blue" type="button">BLUE</button>
+        <button id="red" type="button">RED</button>
+        <button id="size" type="button">SIZE</button>
+        <script>
+            function backgroundRed(){
+                document.getElementById("box").style="background-color:red;"
+            };
+            
+            document.getElementById("blue").onclick = function(){
+                document.getElementById("box").style = "background-color:blue;";
+            };
+            
+            document.getElementById("red").onclick=backgroundRed;
+            
+            document.getElementById("size").onclick = function(){
+                document.getElementById("box").style = "width:50vw; height: 50vw;";
+            };
+        </script>
+    </body>
+</html>
