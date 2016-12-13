@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+            body{
+                margin: 0;
+            }
+            
+            div{
+                width: 100vw;
+                height: 100vh;
+            }
+            
+            h1{
+                display: flex;
+                justify-content: center;
+                overflow: hidden; 
+                border-right: .15em solid orange; 
+                white-space: nowrap; 
+                margin: 0 auto; 
+                letter-spacing: .15em;
+                animation: 
+                typing 2s steps(70, end),
+                blink-caret .75s step-end infinite;
+            }
+            
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 10% }
+            }
+            
+            @keyframes blink-caret {
+                from, to { border-color: transparent }
+                30% { border-color: orange; }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="top">
+            <p>hello how are you</p>
+            <h1>Welcome</h1>
+            <img id="first" src="images/bccjarvyon0-marcus-rahm.jpg">
+        </div>  
+        <div id="middle">
+            <img id="second" src="fog.jpg">
+        </div>    
+    </body>
+</html>
